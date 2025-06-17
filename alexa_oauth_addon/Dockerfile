@@ -1,17 +1,12 @@
-FROM alpine:latest
+FROM python:3.11-slim
 
-# Afegim Python, pip i dependències de compilació per a MarkupSafe, etc.
-RUN apk add --no-cache \
-      bash \
-      python3 \
-      py3-pip \
-      build-base \
-      libffi-dev \
-      openssl-dev
+WORKDIR /app
 
-COPY run.py /run.py
+# Copiem només el run.py
+COPY run.py .
 
 # Instal·lem Flask
-RUN pip3 install --no-cache-dir flask
+RUN pip install --no-cache flask
 
-CMD ["python3", "/run.py"]
+# Cap a executar
+CMD ["python", "run.py"]
