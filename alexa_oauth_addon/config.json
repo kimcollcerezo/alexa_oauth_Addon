@@ -1,14 +1,22 @@
 {
   "name": "Alexa OAuth Dummy",
-  "version": "1.0",
-  "slug": "alexa_oauth_dummy",
+  "version": "1.0.0",
+  "slug": "alexa_oauth_addon",
   "description": "Servidor OAuth2 dummy per Alexa Smart Home",
   "startup": "services",
   "boot": "auto",
-  "ports": {
-    "5001/tcp": 80
-  },
+  "init": false,
+  "hassio_api": false,
+  "homeassistant_api": false,
   "host_network": true,
-  "webui": "http://[HOST]:[PORT:5001]/auth/authorize"
+  "map": [
+    "config:rw"
+  ],
+  "arch": [
+    "aarch64",
+    "armv7",
+    "armhf",
+    "amd64",
+    "i386"
+  ]
 }
-
