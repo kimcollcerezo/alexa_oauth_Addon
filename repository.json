@@ -1,0 +1,8 @@
+{
+  "name": "Repositori de Kim",
+  "maintainer": "Kim Coll",
+  "url": "https://github.com/kimcollcerezo/alexa_oauth_Addon",
+  "addons": [
+    "alexa_oauth_addon"
+  ]
+}
